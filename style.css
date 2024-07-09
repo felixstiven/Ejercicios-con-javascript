@@ -1,0 +1,35 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+h2{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+
+.formField{
+    background-color: antiquewhite;
+    padding-bottom: 20px;
+
+}
+
+#botonDeEnvio{
+    font-size: 15px;
+    background-color: aqua;
+    background: linear-gradient(45deg, #ff357a,#fff172);
+    cursor: pointer;
+}
+
+.tableFormt table{
+    margin: 10px auto;
+}
+th,
+td {
+    border: 1px solid chocolate;
+    padding: 5px;
+  
+}
