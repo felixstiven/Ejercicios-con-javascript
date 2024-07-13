@@ -90,7 +90,7 @@
         saveTransactionObj(transactionObj)
         insertRowInTransactionTable(transactionObj)
 
-    })  
+    })
     
     function convertFormDataToTransationObj(transactionFormData){
         let transactionType = transactionFormData.get("transactionType");
@@ -124,12 +124,13 @@
     }    
 
     function saveTransactionObj(transactionObj){
-        let transactionObjJSON =JSON.stringify(transactionObj);
-        localStorage.setItem("transactionData", transactionObjJSON)
-
+        let myTransactionArray =JSON.parse(localStorage.getItem("transactionData")) || [];
+        myTransactionArray.push(transactionObj);
+        // convierto mi array de transaccion a json
+        let transactionArrayJSON = JSON.stringify(myTransactionArray);
+        // guardo mi array de transaccion en formato JSON en el local storage
+        localStorage.setItem("transactionData", transactionArrayJSON)
     }
-
-
 
 
 
