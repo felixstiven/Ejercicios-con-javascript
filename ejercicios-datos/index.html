@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>ejersicios con java script</h1> -->
+    <!-- <button onclick='saludar("stiven ", "felix") '  > saludar a stiven felix</button>
+    <button onclick='saludar("fernando ", "felix") '  > saludar a fernando felix</button>
+    <button onclick='saludar("samara ", "felix") '  > saludar a samara felix</button>
+
+    <div  id="esteDivSeLlamaSaludar"> te voy a saludar</div> -->
+
+    <!-- si son entre las 7 de la mañana y las 11:59 deci "Buenos dias" -->
+    <!-- si estamos entre las 12 y las 18 deci "Buenas tardes" -->
+    <!-- si estamos entre las 19 y las 23:59 deci "Buenas noches" -->
+
+    <h2>Mi aplicacion para gastos</h2>
+    <form id="transactionForm" action="">
+        <div class="formField">
+            Tipo de transaccion
+            <input id="ingreso" type="radio" name="transactionType" value="ingreso">
+            <label for="ingreso">ingreso</label>
+            <input id="egreso"  type="radio" name="transactionType" value="egreso">
+            <label for="egreso">egreso</label>
+        </div>
+        <div class="formField">
+            <label for="transactionDescription">Descripcion</label>
+            <input id="transactionDescription" name="transactionDescription" type="text">
+        </div>
+        <div class="formField">
+            <label for="transactionAmount">Monto</label>
+            <input id="transactionAmount" name="transactionAmount" type="number">
+        </div>
+        <div class="formField">
+            <label for="transactionCategory">Categoria</label>
+            <input id="transactionCategory" name="transactionCategory" type="text">
+        </div>
+        <div class="formField">
+            <button id="botonDeEnvio">Agregar</button>
+        </div>
+    </form>
+
+    <div class="tableFormt">
+        <table id="transactionTable">
+            <tr>
+                <th> <!-- t= tabla h= encabezado solo para el encabezado de la primera fila--> 
+                    Tipo
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Monto
+                </th>
+                <th>
+                    Categoria
+                </th>
+            </tr>
+            <tr>
+                <td>ingreso</td><!-- table of date= tabña donde vas los datos-->
+                <td>sueldo</td>
+                <td>1000</td>
+                <td>trabajo</td>
+            </tr>
+            <tr>
+                <td>egreso</td>
+                <td>Hamburguesa</td>
+                <td>7</td>
+                <td>comida</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+    
+
+<script src="index.js" ></script>
+</html>
