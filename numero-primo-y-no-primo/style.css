@@ -18,6 +18,7 @@ body{
     text-align: center;
     max-width: 100%;
     width: 800px;
+    height: auto;
     box-shadow: #e62d2d 0px 0px 25px;
 }
 
@@ -28,11 +29,14 @@ h2{
 }
 
 .input{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
     letter-spacing: 1px;
     line-height: 40px;
-    margin: 50px auto;
+    margin: 30px auto;
     max-width: 600px;
 }
 
@@ -44,6 +48,7 @@ h2{
     padding: 15px 40px;
     font-size: 16px;
     box-shadow: #fff 0px 0px 15px;
+    margin-bottom: 20px;
 }
 .btn:hover{
     background-color: brown;
@@ -54,4 +59,9 @@ input{
     height: 52px;
     border-radius: 10px;
     font-size: 16px;
+}
+
+p{
+
+    margin-bottom: 0px;
 }

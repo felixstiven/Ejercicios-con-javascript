@@ -35,8 +35,14 @@ function numberToTex(n,textoUsar){
 btn.addEventListener("click",()=>{
     let secuencia = fibonacci(numero);
     secuencia.forEach((dato)=>{
-        let hijo = document.createElement("li");
+        let hijo = document.createElement("p");
         hijo.innerHTML = numberToTex(dato, "|");
         texto.appendChild(hijo)
     })
 })
+
+
+
+
+
+

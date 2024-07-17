@@ -11,8 +11,8 @@ body{
     height: 100vh;
 }
 
-.contenedor{
-    background-color: #61e62d;
+.container{
+    background-color: #2d5ee6;
     border-radius: 10px;
     padding: 50px 20px;
     text-align: center;
@@ -26,23 +26,20 @@ h2{
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.chiste{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:#fff;
-    min-height: 70px;
-    border-radius: 8px;
-    border: 2px solid blue;
-    margin-top: 20px;
+
+.input{
+    
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
 }
 
 .btn{
     background-color: blue;
     color: #fff;
     border: 0;
-    margin-top: 20px;
     border-radius: 10px;
     padding: 15px 40px;
     font-size: 16px;
@@ -51,4 +48,25 @@ h2{
 .btn:hover{
     background-color: brown;
     border: 2px solid blue;
+}
+
+input{
+    height: 52px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 300px;
+    max-height: 400px;
+    overflow: auto;
+}
+p{
+    font-size: 18px;
 }
