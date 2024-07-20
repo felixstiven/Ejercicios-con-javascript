@@ -79,3 +79,18 @@ function ejercicioCinco(){
 }
 
 /** 6) Hcer uns funcion que, dado como dato de entrada nuestra fecha de cumpleaños, nos diga cuantos dias faltan para el mismo */
+
+function ejercicioSeis(a = "16 oct 2024"){
+    let cumpleaños= new Date(a);
+    let hoy = new Date();
+    let diasRestantes = Math.floor((cumpleaños.getTime() - hoy.getTime()) / (1000*60*60*24))
+    console.log(` hoy es  ${hoy}, tus cumpleaños es ${cumpleaños} y faltan ${diasRestantes} dias para tus cumpleaños`)
+}
+
+/** 7/ Realizar una funcion que, dao como dato de entrada una oracion, nos devuelva un arreglo que contenga todas las palabras usadas en la oracion. */
+
+function ejercicioSiete ( text = "hola todos como estan"){
+    let words = text.split(" ");
+    console.log(words);
+}
+
