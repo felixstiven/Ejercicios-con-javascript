@@ -94,3 +94,4 @@ function ejercicioSiete ( text = "hola todos como estan"){
     console.log(words);
 }
 
+
