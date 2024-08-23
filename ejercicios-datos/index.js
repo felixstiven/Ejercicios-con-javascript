@@ -10,6 +10,15 @@ form.addEventListener("submit", function(event){
 
 })
 
+document.addEventListener("DOMContentLoaded", function(event){
+    let transactionObjArr = JSON.parse(localStorage.getItem("transactionData"));
+    transactionObjArr.forEach(
+        function (arrayElement){
+            insertRowInTransactionTable(arrayElement)
+        }
+    )
+})
+
 function convertFormDataToTransationObj(transactionFormData){
     let transactionType = transactionFormData.get("transactionType");
     let transactionDescription = transactionFormData.get("transactionDescription");
@@ -28,21 +37,21 @@ function insertRowInTransactionTable(transactionObj){
 
     let newTransactionRowRef = transactionTableRef.insertRow(-1);
 
-    let newTypeCellRef = newTransactionRowRef .insertCell(0);
-    newTypeCellRef .textContent = transactionObj["transactionType"];
+    let newTypeCellRef = newTransactionRowRef.insertCell(0);
+    newTypeCellRef.textContent = transactionObj["transactionType"];
 
-    newTypeCellRef = newTransactionRowRef .insertCell (1);
+    newTypeCellRef = newTransactionRowRef.insertCell (1);
     newTypeCellRef .textContent = transactionObj["transactionDescription"];
 
-    newTypeCellRef = newTransactionRowRef .insertCell (2);
+    newTypeCellRef = newTransactionRowRef.insertCell (2);
     newTypeCellRef .textContent = transactionObj["transactionAmount"];
 
-    newTypeCellRef = newTransactionRowRef .insertCell (3);
+    newTypeCellRef = newTransactionRowRef.insertCell (3);
     newTypeCellRef .textContent = transactionObj["transactionCategory"];
 }    
 
 function saveTransactionObj(transactionObj){
-    let myTransactionArray =JSON.parse(localStorage.getItem("transactionData")) || [];
+    let myTransactionArray = JSON.parse(localStorage.getItem("transactionData")) || [];
     myTransactionArray.push(transactionObj);
     // convierto mi array de transaccion a json
     let transactionArrayJSON = JSON.stringify(myTransactionArray);
