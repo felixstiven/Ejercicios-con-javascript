@@ -4,71 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>UAESP</title>
 </head>
 <body>
-    <!-- <h1>ejersicios con java script</h1> -->
-    <!-- <button onclick='saludar("stiven ", "felix") '  > saludar a stiven felix</button>
-    <button onclick='saludar("fernando ", "felix") '  > saludar a fernando felix</button>
-    <button onclick='saludar("samara ", "felix") '  > saludar a samara felix</button>
-
-    <div  id="esteDivSeLlamaSaludar"> te voy a saludar</div> -->
-
-    <!-- si son entre las 7 de la mañana y las 11:59 deci "Buenos dias" -->
-    <!-- si estamos entre las 12 y las 18 deci "Buenas tardes" -->
-    <!-- si estamos entre las 19 y las 23:59 deci "Buenas noches" -->
-
-    <h2>Mi aplicacion para gastos</h2>
-    <form id="transactionForm" action="">
-        <div class="formField">
-            Tipo de transaccion
-            <input id="ingreso" type="radio" name="transactionType" value="ingreso">
-            <label for="ingreso">ingreso</label>
-            <input id="egreso"  type="radio" name="transactionType" value="egreso">
-            <label for="egreso">egreso</label>
+    <section class="nav-bar">
+        <div class="anterior">
+            <button>Anterior</button>
         </div>
-        <div class="formField">
-            <label for="transactionDescription">Descripcion</label>
-            <input id="transactionDescription" name="transactionDescription" type="text">
+        <div class="usuario">
+            <i class="fa-solid fa-user icon"></i> <a href="#">Rol Usuario</a>
         </div>
-        <div class="formField">
-            <label for="transactionAmount">Monto</label>
-            <input id="transactionAmount" name="transactionAmount" type="number">
+    </section>
+    <section class="container-prc">
+        <h2>Riesgos Gestion</h2>
+        <form  class="form" id="transactionForm" action="">
+            <div class="formField">
+                <label for="transactionReferencia">Id/referencia:</label>
+                <input required type="text" id="transactionReferencia" name="transactionReferencia">
+            </div>
+            <div class="formField">
+                <!-- <input required id="ingreso" type="radio" name="transactionType" value="ingreso">
+                <label for="ingreso">ingreso</label>
+                <input id="egreso"  type="radio" name="transactionType" value="egreso">
+                <label for="egreso">egreso</label> -->
+                <label for="">Riesgo Gestion:</label>
+                <select name="transactionType" id="ingreso">
+                    <option value="Plan manejo de Oportunidades">Plan manejo de Oportunidades</option>
+                    <option value="Identificacion de la Oportunidad"> Identificacion de la Oportunidad</option>
+                    <option value="Evaluacion por liena de Defensa">Evaluacion por liena de Defensa</option>
+                </select>
+            </div>
+            <div class="formField">
+                <label for="transactionDescription">Accion:</label>
+                <textarea name="transactionDescription" id="transactionDescription"></textarea>
+                <!-- <input id="transactionDescription" name="transactionDescription" type="text"> -->
+            </div>
+            <div class="formField">
+                <label for="transactionAmount">Responsable:</label>
+                <input required id="transactionAmount" name="transactionAmount" type="text">
+            </div>
+            <div class="formField">
+                <label for="transactionCategory">Fecha Programada:</label>
+                <input required id="transactionCategory" name="transactionCategory" type="date">
+            </div>
+            <div class="formField">
+                <label for="transactionSeguimiento">Fecha Seguimiento:</label>
+                <input required id="transactionSeguimiento" name="transactionSeguimiento" type="date">
+                <label for="">Trimestre:</label>
+                <select name="transactionTrimestre" id="">
+                    <option value=" 1 trimestre">1 Trimestre</option>
+                    <option value="2 trimestre">2 Trimestre</option>
+                    <option value="3 trimestre">3 Trimestre</option>
+                    <option value="4 trimestre">4 trismestre</option>
+                </select>
+            </div>
+            <div class="formField">
+                <label for="transactionEstado">Estado:</label>
+                <input required id="transactionEstado" name="transactionEstado" type="text">
+            </div>
+                <button id="botonDeEnvio">Agregar</button>   
+        </form>
+        <div class="tableFormt">
+            <table id="transactionTable">
+                <tr>
+                    <th> <!-- t= tabla h= encabezado solo para el encabezado de la primera fila--> 
+                        Id
+                    </th>
+                    <th>
+                        Riesgo Gestion
+                    </th>
+                    <th>
+                        Accion
+                    </th>
+                    <th>
+                        Responsable
+                    </th>
+                    <th>
+                        Fecha Programada
+                    </th>
+                    <th>
+                        Fecha Seguimiento
+                    </th>
+                    <th>
+                        Trimestre
+                    </th>
+                    <th>
+                        Estado
+                    </th>
+                    <th>
+                        Eliminar
+                    </th>
+                    <th>
+                        Editar
+                        
+                    </th>
+                </tr>
+            </table>
         </div>
-        <div class="formField">
-            <label for="transactionCategory">Categoria</label>
-            <input id="transactionCategory" name="transactionCategory" type="text">
-        </div>
-        <div class="formField">
-            <button id="botonDeEnvio">Agregar</button>
-        </div>
-    </form>
-
-    <div class="tableFormt">
-        <table id="transactionTable">
-            <tr>
-                <th> <!-- t= tabla h= encabezado solo para el encabezado de la primera fila--> 
-                    Tipo
-                </th>
-                <th>
-                    Descripcion
-                </th>
-                <th>
-                    Monto
-                </th>
-                <th>
-                    Categoria
-                </th>
-            </tr>
-        </table>
-    </div>
-
-
-
-    
-
+    </section>
 </body>
-    
-
 <script src="index.js" ></script>
 </html>
