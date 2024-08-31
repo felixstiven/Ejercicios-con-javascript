@@ -87,14 +87,31 @@ function insertRowInTransactionTable(transactionObj){
     newTypeCellRef = newTransactionRowRef.insertCell (7);
     newTypeCellRef .textContent = transactionObj["transactionEstado"];
 
+    // Create  Button Delete
     let newDeletCell = newTransactionRowRef.insertCell(8);
-    let deleteButton = document.createElement("button");
-    deleteButton.textContent = "eliminar";
-    newDeletCell.appendChild(deleteButton)
-
+    let deleteButton = document.createElement("i");
+        deleteButton.className = "fa-solid fa-trash";
+        deleteButton.style.marginLeft = "15px";
+        deleteButton.style.cursor = "pointer";
+        newDeletCell.appendChild(deleteButton);
+    // Create Button Update
+    let newUdpdateCell = newTransactionRowRef.insertCell(9);
+    let udpdateButton = document.createElement("i");
+        udpdateButton.className = "fa-solid fa-pen";
+        udpdateButton.style.marginLeft = "15px";
+        udpdateButton.style.cursor  = "pointer";
+        newUdpdateCell.appendChild(udpdateButton);
+    // Create Button See
+    let newSeeCell = newTransactionRowRef.insertCell(10);
+    let seeButton = document.createElement("i");
+        seeButton.className ="fa-solid fa-eye";
+        seeButton.style.marginLeft = "5px";
+        seeButton.style.cursor = "pointer";
+        newSeeCell.appendChild(seeButton);
+    // Funtion of Button Delete
     deleteButton.addEventListener("click", (event) =>{
-        let transactionRow = event.target.parentNode.parentNode;
-        let transactionId = transactionRow.getAttribute("data-transaction-id");
+    let transactionRow = event.target.parentNode.parentNode;
+    let transactionId = transactionRow.getAttribute("data-transaction-id");
         transactionRow.remove();
         deleteTransactionObj(transactionId)
     })
@@ -125,38 +142,3 @@ function saveTransactionObj(transactionObj){
     localStorage.setItem("transactionData", transactionArrayJSON)
 }
 
-
-
-
-//   <!-- si son entre las 7 de la mañana y las 11:59 deci "Buenos dias" -->
-//   <!-- si estamos entre las 12 y las 18 deci "Buenas tardes" -->
-//   <!-- si estamos entre las 19 y las 23:59 deci "Buenas noches" -->
-
-
-
-// function saludar(nombre, apellido){
-//         console.log("Hola " + nombre + "" + apellido);
-//         var fechaYHoraActual = new Date();
-//         var horaActual = fechaYHoraActual.getHours();
-//         var firstPartMessage ="";
-
-//         if (horaActual > 1 && horaActual <=12 ){
-//             firstPartMessage = "Buenas dias, "
-//         }
-
-        
-//         if (horaActual > 12 && horaActual <=18 ){
-//             firstPartMessage = "Buenas tardes, "
-//         }
-
-//         if (horaActual > 18 && horaActual <=24 ){
-//             firstPartMessage = "Buenas noches, "
-//         }   
-        
-//         console.log(firstPartMessage + "" + nombre + apellido);
-//     var divSaludar = document.getElementById("esteDivSeLlamaSaludar");
-//     divSaludar.innerText = firstPartMessage + "" + nombre +"" + apellido;
-//     // saludar("damian ", "perez")
-//     // saludar("stiven ", "felix")
-//     // saludar("damian ", "alvis")
-//     }

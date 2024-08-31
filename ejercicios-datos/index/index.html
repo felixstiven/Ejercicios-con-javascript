@@ -3,20 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>UAESP</title>
 </head>
 <body>
     <section class="nav-bar">
+        <div class="img-uaesp">
+            <img src="/img/logo_uaesp_.jpg" alt="">
+        </div>
         <div class="anterior">
             <button>Anterior</button>
         </div>
         <div class="usuario">
-            <i class="fa-solid fa-user icon"></i> <a href="#">Rol Usuario</a>
+            <i class="fa-solid fa-user icon icon-1"></i> <a href="#">Rol Usuario</a>
+        </div>
+        <div class="export">
+            <span>convertir archivo Excel</span>
+            <input accept=".xlsx" id="inputfile" type="file">
+        </div>
+        <div class="container-search">
+            <span>Buscar Documento</span>
+            <select name="transactionTyp" id="search">
+                <option value="Plan manejo de Oportunidades">Plan manejo de Oportunidades</option>
+                <option value="Identificacion de la Oportunidad"> Identificacion de la Oportunidad</option>
+                <option value="Evaluacion por liena de Defensa">Evaluacion por liena de Defensa</option>
+            </select>
+            <div class="search">
+                <input required placeholder="Id/Referencia" type="text">
+            </div>
+            <button> Buscar <i class="fa-solid fa-magnifying-glass icon-2"></i></button>
         </div>
     </section>
     <section class="container-prc">
+        <div class="img-uaesp-2">
+            <img src="/img/riesgoGestion.jpg" alt="">
+        </div>
         <h2>Riesgos Gestion</h2>
         <form  class="form" id="transactionForm" action="">
             <div class="formField">
@@ -36,7 +58,7 @@
                 </select>
             </div>
             <div class="formField">
-                <label for="transactionDescription">Accion:</label>
+                <label for="transactionDescription" class="accion">Accion:</label>
                 <textarea name="transactionDescription" id="transactionDescription"></textarea>
                 <!-- <input id="transactionDescription" name="transactionDescription" type="text"> -->
             </div>
@@ -68,41 +90,45 @@
         <div class="tableFormt">
             <table id="transactionTable">
                 <tr>
-                    <th> <!-- t= tabla h= encabezado solo para el encabezado de la primera fila--> 
+                    <th class="th-pr"> <!-- t= tabla h= encabezado solo para el encabezado de la primera fila--> 
                         Id
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Riesgo Gestion
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Accion
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Responsable
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Fecha Programada
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Fecha Seguimiento
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Trimestre
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Estado
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Eliminar
                     </th>
-                    <th>
+                    <th class="th-pr">
                         Editar
-                        
+                    </th>
+                    <th class="th-pr">
+                        ver
                     </th>
                 </tr>
             </table>
         </div>
     </section>
 </body>
-<script src="index.js" ></script>
+<script src="/javascript/index.js" ></script>
+<script src="/javascript/convert.js"></script>
+<script src="/node_modules/xlsx/dist/xlsx.full.min.js"></script> <!-- funciones de libreria--> 
 </html>
