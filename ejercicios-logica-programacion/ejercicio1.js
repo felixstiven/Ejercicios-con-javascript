@@ -188,7 +188,129 @@
 
 // alert("el precio total a pagar con el descuento es:" + precioFinal)
 
+ 
 
+// Escribe un programa que solicite al usuario dos números y luego muestre todos los números primos que hay 
+// entre esos dos números, incluyendo los extremos.
+
+// Solicita al usuario que ingrese dos números enteros.
+// Encuentra todos los números primos en el rango entre los dos números insertados, incluyendo esos dos números.
+// Ejemplo de entrada: Inserta el primer número: 10, Inserta el segundo número: 20.
+// Salida esperada: Los números primos entre 10 y 20 son: 11, 13, 17, 19.
+// Un número primo es un número natural mayor que 1 que solo es divisible por sí mismo y por 1. En otras palabras, 
+// un número primo tiene exactamente dos divisores: 1 y él mismo. Por ejemplo, 2, 3, 5, 7, 11 
+// son algunos ejemplos de números primos, ya que no tienen otros divisores aparte de 1 y ellos mismos.
+
+// let numero1 = parseInt(prompt("ingresa el primer numero "));
+// let numero2 = parseInt(prompt("ingresa el segundo numero"));
+
+// function esPrimo(num){
+//     if(num <= 1) return false;
+    
+//     for(let i = 2; i <= Math.sqrt(num); i++){
+//         if (num % i == 0) return false;
+//     }
+//     return true;
+// };
+
+// console.log("lo numero primos entre", numero1, "y", numero2, ":");
+
+// for (let i = numero1; i <= numero2; i++){
+//     if(esPrimo(i)){
+//         console.log(i)
+//     }
+// }
+
+
+// Crea un programa que convierta una temperatura de grados Celsius a grados Fahrenheit o viceversa,
+//  según la elección del usuario.
+
+// Solicita al usuario que elija el tipo de conversión: de Celsius a Fahrenheit o de Fahrenheit a Celsius.
+// Solicita al usuario que ingrese la temperatura que desea convertir.
+// Utiliza funciones para realizar las conversiones necesarias.
+// Muestra el resultado de la conversión al usuario.
+// Ejemplo de entrada: ¿Qué tipo de conversión deseas realizar? (1 para Celsius a Fahrenheit, 
+// 2 para Fahrenheit a Celsius): 1, Inserta la temperatura en grados Celsius: 25
+// Salida esperada: 25 grados Celsius equivalen a 77 grados Fahrenheit.
+// Para convertir de Celsius a Fahrenheit: Multiplica la temperatura en grados Celsius por 9/5 y luego suma 32.
+
+// La fórmula es: °F = (°C × 9/5) + 32. Para convertir de Fahrenheit a Celsius: Resta 32 de la temperatura en grados 
+// Fahrenheit y luego multiplica por 5/9. La fórmula es: °C = (°F – 32) × 5/9.
+
+// function celsiusToFahrenheit(celcius){
+//     return (celcius  * 9/5 ) + 32;
+// }
+
+// function  fahrenheitToCelsius(fahrenheit){
+//     return (fahrenheit-32) * 5/9;
+// }
+
+// function coversorOfTemperature(){
+
+//     let opcion = prompt("¿ Que tipo de conversion deseas realizar? 1) celcius a fahrenhe - 2)fahrenhe a celcius");
+//     opcion = parseInt(opcion);
+
+//     if( opcion != 1 && opcion != 2){
+//         alert ("Opcion no valida ingresa 1 o 2 ");
+//         return;
+
+//     } 
+
+//     let temperatura = prompt("ingresa la temperatura a convertir ");
+//     temperatura = parseFloat(temperatura);
+
+//     let resultado;
+
+//     if (opcion === 1){
+//         resultado = celsiusToFahrenheit(temperatura);
+//         alert( temperatura + " grados Celsius equivalen a " + resultado + "grados Fahrenhe ");
+//     } else {
+//         resultado =  fahrenheitToCelsius(temperatura);
+//         alert(temperatura + "grados Fahrenhe equivalen a " + resultado + " grados Celsius");
+//     }
+// }    
+// coversorOfTemperature();
+
+
+
+
+// Escribe un programa que calcule el factorial de un número entero no negativo ingresado por el usuario.
+
+// Define una función llamada calculateFactorial que tome un parámetro number que represente
+// el número del cual se calculará el factorial.
+// Dentro de la función, utiliza un bucle for para calcular el factorial del número.
+// Inicializa una variable result en 1, ya que el factorial de 0 y 1 es 1.
+// Itera desde 1 hasta number, multiplicando cada número por result en cada iteración
+// y almacenando el resultado en result.
+// Devuelve result al final de la función.
+// Pide al usuario que ingrese un número entero no negativo.
+// Convierte la entrada del usuario a un número entero utilizando la función parseInt.
+// Llama a la función calculateFactorial con el número ingresado por el usuario y muestra el resultado.
+// El factorial de un número entero positivo ( n ), denotado como ( n! ), es el producto de todos los 
+// enteros positivos desde 1 hasta ( n ). La fórmula para calcular el factorial es 
+// ( n! = n x (n-1) x (n-2) x … x 2 x 1 ). Por ejemplo, el factorial de 5 (( 5! )) se calcula como 
+// ( 5 x 4 x 3 x 2 x 1 = 120 ).
+
+// let numero = prompt("para calcular el factorial de un numero, ingresa un numero no negativo ");
+// numero = parseInt(numero);
+
+
+// function calaculateFactorial(number){
+//     let resultado = 1;
+
+//     for ( let i = 1; i <= number; i++){
+//         resultado *= i;
+//     }
+//     return resultado;
+// }
+// let number = parseInt(numero);
+
+// if (!isNaN(number) && number >=0){
+//     let factorial = calaculateFactorial(number);
+//     alert("el factorial de " + number + " es " + factorial);
+// } else {
+//     alert("entrada invalida ingresa un numero no negativo")
+// }
 
 
 
