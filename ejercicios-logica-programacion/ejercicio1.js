@@ -95,22 +95,100 @@
 // }
 
 
-const Entrada_arr = ["2,1,5,3,8,9"];
+// const Entrada_arr = ["2,1,5,3,8,9"];
 
-const insertionSort = (arr) => {
-    for (let i = 1; i < arr.length; i++) {
-	    let key = arr[i];
-            let j = i - 1;
-            while (j >= 0 && arr[j].num > key.num) {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            arr[j + 1] = key;
-    }
-    return arr;
-};
+// const insertionSort = (arr) => {
+//     for (let i = 1; i < arr.length; i++) {
+// 	    let key = arr[i];
+//             let j = i - 1;
+//             while (j >= 0 && arr[j].num > key.num) {
+//                 arr[j + 1] = arr[j];
+//                 j--;
+//             }
+//             arr[j + 1] = key;
+//     }
+//     return arr;
+// };
 
-insertionSort(Entrada_arr);
+// insertionSort(Entrada_arr);
+
+
+// Escribe un programa que calcule el coste total de un viaje.
+// incluyendo los gastos de alojamiento, alimentación y entretenimiento.
+
+// let gastosAlojamiento = parseFloat(prompt("ingrese el valor de alojamineto "));
+// let gastosAlimentacion = parseFloat(prompt("ingrese el valor de alimentacion"));
+// let gastosEntretenimiento = parseFloat(prompt("ingrese el valor de entretenimiento"));
+// let costoTotal =  gastosAlojamiento + gastosAlimentacion + gastosEntretenimiento;
+// alert('el costo total de su viaje es ' +  costoTotal.toFixed(2) + "$");
+
+
+// Crea un programa que convierta la edad de un perro a años humanos.
+
+// Solicita al usuario que indique la edad de su perro en años.
+// Calcula la edad del perro en años humanos multiplicando la edad del perro por 7.
+// Muestra la edad del perro en años humanos al usuario.
+// Ejemplo de entrada: Edad del perro: 5 años.
+// Salida esperada: La edad del perro en años humanos es 35 años.
+// La forma común de estimar la edad canina es multiplicar la edad del perro por 7. 
+// Esto se basa en la idea de que un año de vida de un perro equivale aproximadamente a siete años 
+// de vida humana en términos de desarrollo y envejecimiento.
+
+
+// let edadPerro = parseInt(prompt("ingresa edad en años de tu perro"));
+// let edadHumana = edadPerro * 7;
+// alert("la edad de tu perro en años de humano es: " + edadHumana)
+
+
+// Crea un programa que calcule el IMC de una persona a partir de su peso y altura.
+
+// Solicita al usuario que inserte su peso en kilogramos y su altura en metros.
+// Calcula el IMC dividiendo el peso entre la altura al cuadrado.
+// Muestra el IMC calculado al usuario y su clasificación según la tabla de IMC.
+// Ejemplo de entrada: Peso: 70kg, Altura: 1.75m.
+// Salida esperada: IMC: 22.86, Clasificación: Normal.
+
+// let pesoKg = parseFloat(prompt("ingresa tu peso en kg"));
+// let altura = parseFloat(prompt("ingresa tu estatura en metros"));
+
+// let imc = pesoKg / (altura * altura);
+
+// if (imc <= 18.5){
+//     alert("tu imc es: " + imc.toFixed(2) + " clasificacion: peso bajo");
+// };
+// if ( imc > 18.6 && imc <= 24.9 ){
+//     alert( "tu imc es:" + imc.toFixed(2) + " clasificacion: peso normal");
+// };
+// if ( imc > 25 && imc <= 29.9) {
+//     alert("tu imc es: " + imc.toFixed(2) + " clasificacion: sobrepeso");
+// };
+// if (imc > 30 ){
+//     alert("tu imc es: " + imc.toFixed(2) + " clasificacion: Obesidad")
+// }
+
+
+// Crea un programa que calcule el precio final de un producto después de aplicarle un descuento.
+
+// Solicita al usuario que inserte el precio original del producto.
+// Solicita al usuario que inserte el porcentaje de descuento a aplicar (por ejemplo, 10 para un descuento del 10%).
+// Utiliza una función para calcular el precio final después de aplicar el descuento.
+// Muestra el precio final al usuario.
+// Ejemplo de entrada:
+
+// Inserta el precio original del producto: 50
+// Inserta el porcentaje de descuento a aplicar: 20
+
+// Salida esperada: El precio final del producto después de aplicar un descuento del 20% es: 40 euros.
+
+// let precioOriginal = parseFloat(prompt("ingrese el precio Total en Dolares"));
+// let descuento = parseInt(prompt("ingrese el valor de descuento"));
+
+// let precioConDescuento = (precioOriginal * descuento) / 100;
+// let precioFinal = precioOriginal  - precioConDescuento; 
+
+// alert("el precio total a pagar con el descuento es:" + precioFinal)
+
+
 
 
 
